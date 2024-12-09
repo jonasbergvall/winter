@@ -1,0 +1,6 @@
+streamlit
+pyairtable
+toml
+requests
+python-docx
+Pillow

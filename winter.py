@@ -194,7 +194,7 @@ elif selected == "Your Story":
         st.write(story["story"])
     else:
         # In case all archetypes are tied (unlikely, but handled here)
-        st.write("It looks like you equally embody all aspects of winter! Please try answering again to see if we can find your true match.")
+        st.write("It looks like you equally embody all aspects of winter! Please use Introspection to see if we can find your true match.")
 
 
 elif selected == "Analysis":

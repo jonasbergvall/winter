@@ -10,13 +10,11 @@ from docx.shared import Inches
 from PIL import Image, ImageDraw, ImageOps
 import os
 
-# Load configuration from TOML
-# config = toml.load("config.toml")
+# Extract Airtable configuration from Streamlit secrets
+AIRTABLE_API_KEY = st.secrets["airtable"]["api_key"]
+AIRTABLE_BASE_ID = st.secrets["airtable"]["base_id"]
+AIRTABLE_TABLE_NAME = st.secrets["airtable"]["table_name"]
 
-# Extract Airtable configuration
-AIRTABLE_API_KEY = config["airtable"]["api_key"]
-AIRTABLE_BASE_ID = config["airtable"]["base_id"]
-AIRTABLE_TABLE_NAME = config["airtable"]["table_name"]
 
 # Load JSON Data
 with open('winter.json') as user_data_file:

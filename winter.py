@@ -32,7 +32,7 @@ with open('antidote.json', 'r') as modes_file:
 # Global Styling for Streamlit App
 logo = '''
 <div style="text-align: right; margin-bottom: 20px;">
-    <img src="https://ledargymmet.se/wp-content/uploads/2022/08/Resurs-18.png" width="150px">
+    <img src="https://bestofworlds.se/img/lglogo.png" width="150px">
 </div>
 '''
 
@@ -150,7 +150,7 @@ elif selected == "Your Story":
             doc = Document()
 
             # Add the logo to the document
-            logo_url = "https://ledargymmet.se/wp-content/uploads/2022/08/Resurs-18.png"
+            logo_url = "https://bestofworlds.se/img/lglogo.png"
             try:
                 response = requests.get(logo_url)
                 response.raise_for_status()

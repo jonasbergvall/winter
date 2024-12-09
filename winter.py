@@ -146,7 +146,10 @@ elif selected == "Your Story":
         st.write(enriching_text)
 
         # Add download button for generated story
-        def generate_docx_from_text(story_title, story_text):
+        def generate_docx_from_text(story_title, story_text, enriching_text):
+            """
+            Generates a DOCX file with the given story title, story content, and enriching content.
+            """
             doc = Document()
 
             # Add the logo to the document
@@ -164,13 +167,18 @@ elif selected == "Your Story":
             doc.add_heading(story_title, level=1)
             doc.add_paragraph(story_text)
 
+            # Add enriching content to the document
+            doc.add_heading("Enriching Your Winter Experience", level=2)
+            doc.add_paragraph(enriching_text)
+
             # Save the document to a BytesIO buffer
             docx_output = io.BytesIO()
             doc.save(docx_output)
             docx_output.seek(0)
             return docx_output
 
-        docx_file = generate_docx_from_text(story["title"], story["story"])
+        # Generate and download the DOCX file
+        docx_file = generate_docx_from_text(story["title"], story["story"], enriching_text)
         st.download_button(
             label="Download Your Winter Narrative as DOCX",
             data=docx_file,
@@ -187,6 +195,7 @@ elif selected == "Your Story":
     else:
         # In case all archetypes are tied (unlikely, but handled here)
         st.write("It looks like you equally embody all aspects of winter! Please try answering again to see if we can find your true match.")
+
 
 elif selected == "Analysis":
     st.title("Diverse Winter Narratives")

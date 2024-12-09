@@ -1,0 +1,193 @@
+{
+  "user_input": {
+    "cognitive_perception": {
+      "question": "What I think about winter.",
+      "options": [
+        {
+          "text": "Winter is harsh and inconvenient.",
+          "scores": { "Fighter": 1 }
+        },
+        {
+          "text": "Winter is a necessary part of nature's cycle.",
+          "scores": { "Visionary": 1, "Leader": 1 }
+        },
+        {
+          "text": "Winter brings stillness and reflection.",
+          "scores": { "Visionary": 1 }
+        },
+        {
+          "text": "Winter is the most challenging season.",
+          "scores": { "Fighter": 1, "Leader": 1 }
+        }
+      ]
+    },
+    "emotional_sentiments": {
+      "question": "What I feel about winter.",
+      "options": [
+        {
+          "text": "Winter makes me feel nostalgic.",
+          "scores": { "Visionary": 1, "Lover": 1 }
+        },
+        {
+          "text": "Winter fills me with excitement.",
+          "scores": { "Leader": 1, "Fighter": 1 }
+        },
+        {
+          "text": "Winter makes me feel isolated and sad.",
+          "scores": { "Fighter": 1 }
+        },
+        {
+          "text": "Winter makes me feel cozy and comforted.",
+          "scores": { "Lover": 1 }
+        }
+      ]
+    },
+    "perceived_societal_view": {
+      "question": "How other people seem to see winter.",
+      "options": [
+        {
+          "text": "Other people seem to enjoy winter sports and activities.",
+          "scores": { "Leader": 1, "Fighter": 1 }
+        },
+        {
+          "text": "Other people complain about winter and dislike it.",
+          "scores": { "Fighter": 1 }
+        },
+        {
+          "text": "Other people find winter romantic and magical.",
+          "scores": { "Lover": 1 }
+        },
+        {
+          "text": "People often talk about winter being a test of resilience.",
+          "scores": { "Leader": 1, "Fighter": 1 }
+        }
+      ]
+    },
+    "abstract_interpretation": {
+      "question": "This is the essence of winter.",
+      "options": [
+        {
+          "text": "Winter is a time for reflection and inner growth.",
+          "scores": { "Visionary": 1, "Leader": 1 }
+        },
+        {
+          "text": "Winter is a beautiful struggle.",
+          "scores": { "Fighter": 1, "Visionary": 1 }
+        },
+        {
+          "text": "Winter is a reminder of life's cycles.",
+          "scores": { "Visionary": 1 }
+        },
+        {
+          "text": "Winter is the stillness that makes movement meaningful.",
+          "scores": { "Visionary": 1 }
+        }
+      ]
+    },
+    "positive_anchors": {
+      "question": "My favorite thing about winter.",
+      "options": [
+        {
+          "text": "The way snow softens every sound.",
+          "scores": { "Lover": 1, "Visionary": 1 }
+        },
+        {
+          "text": "The festive season and holidays.",
+          "scores": { "Lover": 1 }
+        },
+        {
+          "text": "Hot chocolate and sitting by the fire.",
+          "scores": { "Lover": 1 }
+        },
+        {
+          "text": "Seeing nature in a state of rest.",
+          "scores": { "Visionary": 1 }
+        }
+      ]
+    },
+    "negative_anchors": {
+      "question": "My least favorite thing about winter.",
+      "options": [
+        {
+          "text": "The long, dark nights.",
+          "scores": { "Fighter": 1 }
+        },
+        {
+          "text": "The icy roads and the risk they bring.",
+          "scores": { "Fighter": 1 }
+        },
+        {
+          "text": "Feeling isolated because it’s too cold to go out.",
+          "scores": { "Fighter": 1 }
+        },
+        {
+          "text": "Everything is grey and lifeless.",
+          "scores": { "Fighter": 1 }
+        }
+      ]
+    },
+    "behavioral_tendencies": {
+      "question": "During winter, I tend to...",
+      "options": [
+        {
+          "text": "Stay inside and read more.",
+          "scores": { "Visionary": 1, "Lover": 1 }
+        },
+        {
+          "text": "Take up winter sports to stay active.",
+          "scores": { "Fighter": 1, "Leader": 1 }
+        },
+        {
+          "text": "Cook comfort food and host gatherings.",
+          "scores": { "Lover": 1 }
+        },
+        {
+          "text": "Travel to warmer places if possible.",
+          "scores": { "Visionary": 1 }
+        }
+      ]
+    },
+    "personification": {
+      "question": "If winter were a person.",
+      "options": [
+        {
+          "text": "A wise elder who knows the value of patience.",
+          "scores": { "Leader": 1, "Visionary": 1 }
+        },
+        {
+          "text": "A fierce warrior who tests my resilience.",
+          "scores": { "Fighter": 2 }
+        },
+        {
+          "text": "A gentle caretaker, wrapping the world in a blanket of snow.",
+          "scores": { "Lover": 2 }
+        },
+        {
+          "text": "A strict teacher who forces me to grow through hardship.",
+          "scores": { "Leader": 1, "Fighter": 1 }
+        }
+      ]
+    },
+    "metaphor_comparison": {
+      "question": "If I compare winter to an experience.",
+      "options": [
+        {
+          "text": "Climbing a mountain—challenging, but the view at the top is worth it.",
+          "scores": { "Fighter": 1, "Leader": 1 }
+        },
+        {
+          "text": "A long-awaited rest after a hard year of work.",
+          "scores": { "Lover": 1, "Visionary": 1 }
+        },
+        {
+          "text": "A maze that’s hard to navigate but rewarding once I get through.",
+          "scores": { "Fighter": 1, "Visionary": 1 }
+        },
+        {
+          "text": "A difficult but necessary cleansing process.",
+          "scores": { "Visionary": 1, "Leader": 1 }
+        }
+      ]
+    }
+  }
+}

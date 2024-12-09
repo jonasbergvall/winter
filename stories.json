@@ -1,0 +1,48 @@
+{
+  "stories": {
+    "pure": {
+      "Leader": {
+        "title": "The Quest for Winter's Wisdom",
+        "story": "Winter comes with challenges, but you see it as an opportunity to lead others through its icy paths. Gathering your team, you organize efforts to explore the snow-covered land, ensuring everyone feels safe and inspired. It is not just about survival; it's about finding purpose and guiding others to grow through the trials that winter brings."
+      },
+      "Fighter": {
+        "title": "Overcoming Winter's Wrath",
+        "story": "Winter is an unyielding adversary. You face it head-on, determined to overcome every obstacle it throws your way—icy roads, biting cold, and endless dark nights. It's a test of endurance, and you draw strength from each struggle. You are the warrior of the cold, pushing forward relentlessly until the warmth of victory arrives."
+      },
+      "Visionary": {
+        "title": "A Voyage into Winter's Depths",
+        "story": "To you, winter is more than just a season—it's a journey of introspection. The snow-covered world invites you to look inward, to explore what lies beneath the surface. The quiet and stillness of winter offer space for reflection, revealing insights and new perspectives on life. Through winter, you discover that growth often starts in the moments of stillness."
+      },
+      "Lover": {
+        "title": "Winter's Warm Embrace",
+        "story": "For you, winter is a season of connection—hot drinks by the fire, festive gatherings, and the coziness of warm blankets. You find beauty in the cold, seeing how it draws people closer and creates moments of love and joy. It's not the harshness of winter that stands out to you, but the opportunities it brings to find warmth in relationships."
+      }
+    },
+    "blended": {
+      "Leader_Fighter": {
+        "title": "Leading Through Adversity",
+        "story": "Winter is not just a challenge to overcome, but an opportunity to lead. You gather those around you, determined to face the cold head-on, carving a path through the snow-covered terrain. The fierceness of winter tests your strength, but as you lead, you also realize that the true fight is finding hope and unity in the harshest moments."
+      },
+      "Leader_Visionary": {
+        "title": "Guiding Through Reflection",
+        "story": "As winter descends, you take on the role of a leader, but it is not just about guiding others through the snow—it is about seeing what winter represents. You invite those around you to reflect, to find meaning in the darkness, and to see the calm and beauty beneath the ice. Through your guidance, a deeper sense of purpose emerges, connecting the vision of a brighter future with the challenges of today."
+      },
+      "Leader_Lover": {
+        "title": "Leading With Warmth",
+        "story": "Winter is both a test of strength and a call to bring warmth to those around you. As a leader, you strive to inspire others, not just through resilience but through genuine connection. Together, you create moments of comfort—gathering around the fire, sharing stories, and finding joy in the simple things. Your leadership becomes a beacon of hope, showing others that even the coldest of seasons can be full of love."
+      },
+      "Fighter_Visionary": {
+        "title": "The Battle Within and Beyond",
+        "story": "Winter is the ultimate challenge—a fierce opponent that demands everything you have. You fight against the cold, pushing yourself beyond limits, but as you do, you also begin to see winter differently. The struggle becomes a journey inward, a voyage that reveals insights about your strength, your fears, and your true purpose. In fighting the external elements, you find yourself transformed within."
+      },
+      "Fighter_Lover": {
+        "title": "Fighting for Warmth",
+        "story": "The cold of winter is unrelenting, and it takes all of your strength to battle through it. Yet, in every harsh gust of wind, you seek something more—a spark of warmth, a reason to keep going. The fight becomes not just about survival, but about finding moments of connection. You build fires, share laughs, and embrace others, reminding yourself that even in the fiercest battles, there is love to be found."
+      },
+      "Visionary_Lover": {
+        "title": "A Vision of Love in Winter",
+        "story": "To you, winter is a time for reflection, a chance to see the world through new eyes. As the snow falls, you find beauty in every flake, warmth in every gathering. Your vision takes others beyond the cold, into a space of coziness and connection. Together, you create a haven in the midst of winter—a place where dreams flourish and relationships deepen, proving that even in the quietest of seasons, love grows."
+      }
+    }
+  }
+}

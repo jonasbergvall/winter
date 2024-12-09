@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageOps
 import os
 
 # Load configuration from TOML
-config = toml.load("config.toml")
+# config = toml.load("config.toml")
 
 # Extract Airtable configuration
 AIRTABLE_API_KEY = config["airtable"]["api_key"]

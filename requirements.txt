@@ -4,3 +4,4 @@ toml
 requests
 python-docx
 Pillow
+streamlit_option_menu

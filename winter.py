@@ -264,14 +264,14 @@ elif selected == "Analysis":
         "By clicking 'Share,' you agree to the terms outlined in the disclaimers, including the use of your input for research and improvement purposes."
     )
     with st.expander("View Disclaimer"):
-    st.write(
-        "Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. "
-        "They may not reflect real-life experiences or outcomes. Please use them as a creative tool rather than factual advice.\n\n"
-        "Disclaimer: Your input may be stored and used for research and improvement of this application. "
-        "No personally identifiable information is collected or shared.\n\n"
-        "Note: This app uses third-party services like Airtable for data storage. "
-        "By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies."
-    )
+        st.write(
+            "Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. "
+            "They may not reflect real-life experiences or outcomes. Please use them as a creative tool rather than factual advice.\n\n"
+            "Disclaimer: Your input may be stored and used for research and improvement of this application. "
+            "No personally identifiable information is collected or shared.\n\n"
+            "Note: This app uses third-party services like Airtable for data storage. "
+            "By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies."
+        )
 
     if st.button("Share"):
         if user_input.strip():  # Ensure the input isn't empty

@@ -10,7 +10,7 @@ from docx.shared import Inches
 from PIL import Image, ImageDraw, ImageOps
 import os
 
-# Extract Airtable configuration from Streamlit secrets
+# Airtable configuration from Streamlit secrets
 AIRTABLE_API_KEY = st.secrets["airtable"]["api_key"]
 AIRTABLE_BASE_ID = st.secrets["airtable"]["base_id"]
 AIRTABLE_TABLE_NAME = st.secrets["airtable"]["table_name"]

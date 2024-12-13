@@ -288,8 +288,7 @@ elif selected == "Analysis":
         else:
             st.warning("Please enter your thoughts before saving.")
 
-# Footer with disclaimers
-footer = '''
+# Footer with disclaimers and link
 st.markdown("<hr>", unsafe_allow_html=True)
 with st.expander("View Disclaimer"):
     st.write(
@@ -300,7 +299,8 @@ with st.expander("View Disclaimer"):
         "Note: This app uses third-party services like Airtable for data storage. "
         "By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies."
     )
-<hr>
+
+footer = '''
 <div style="text-align: center; margin-top: -20px;">
     <p>Explore more data-driven perspectives at <a href="https://bestofworlds.se" target="_blank">Best of Worlds</a>.</p>
 </div>

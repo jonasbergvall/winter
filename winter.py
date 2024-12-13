@@ -10,7 +10,7 @@ from docx.shared import Inches
 from PIL import Image, ImageDraw, ImageOps
 import os
 
-# Airtable configuration from Streamlit secrets
+# Extract Airtable configuration from Streamlit secrets
 AIRTABLE_API_KEY = st.secrets["airtable"]["api_key"]
 AIRTABLE_BASE_ID = st.secrets["airtable"]["base_id"]
 AIRTABLE_TABLE_NAME = st.secrets["airtable"]["table_name"]
@@ -100,6 +100,18 @@ def round_corners(image, radius):
     result.putalpha(mask)
 
     return result
+
+# Add an expandable disclaimer
+with st.expander("View Disclaimer"):
+    st.write(
+        "Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. "
+        "They may not reflect real-life experiences or outcomes. Please use them as a creative tool rather than factual advice.\n\n"
+        "Disclaimer: Your input may be stored and used for research and improvement of this application. "
+        "No personally identifiable information is collected or shared.\n\n"
+        "Note: This app uses third-party services like Airtable for data storage. "
+        "By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies."
+    )
+
 
 # Navigation Logic
 if selected == "Start":
@@ -251,6 +263,15 @@ elif selected == "Analysis":
     st.markdown(
         "By clicking 'Share,' you agree to the terms outlined in the disclaimers, including the use of your input for research and improvement purposes."
     )
+    with st.expander("View Disclaimer"):
+    st.write(
+        "Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. "
+        "They may not reflect real-life experiences or outcomes. Please use them as a creative tool rather than factual advice.\n\n"
+        "Disclaimer: Your input may be stored and used for research and improvement of this application. "
+        "No personally identifiable information is collected or shared.\n\n"
+        "Note: This app uses third-party services like Airtable for data storage. "
+        "By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies."
+    )
 
     if st.button("Share"):
         if user_input.strip():  # Ensure the input isn't empty
@@ -268,16 +289,17 @@ elif selected == "Analysis":
             st.warning("Please enter your thoughts before saving.")
 
 # Footer with disclaimers
-st.info(
-    "Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. "
-    "They may not reflect real-life experiences or outcomes. Please use them as a creative tool rather than factual advice.\n\n"
-    "Disclaimer: Your input may be stored and used for research and improvement of this application. "
-    "No personally identifiable information is collected or shared.\n\n"
-    "Note: This app uses third-party services like Airtable for data storage. "
-    "By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies."
-)
-
 footer = '''
+st.markdown("<hr>", unsafe_allow_html=True)
+with st.expander("View Disclaimer"):
+    st.write(
+        "Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. "
+        "They may not reflect real-life experiences or outcomes. Please use them as a creative tool rather than factual advice.\n\n"
+        "Disclaimer: Your input may be stored and used for research and improvement of this application. "
+        "No personally identifiable information is collected or shared.\n\n"
+        "Note: This app uses third-party services like Airtable for data storage. "
+        "By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies."
+    )
 <hr>
 <div style="text-align: center; margin-top: -20px;">
     <p>Explore more data-driven perspectives at <a href="https://bestofworlds.se" target="_blank">Best of Worlds</a>.</p>

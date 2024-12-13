@@ -194,7 +194,7 @@ elif selected == "Your Story":
         st.write(story["story"])
     else:
         # In case all archetypes are tied (unlikely, but handled here)
-        st.write("It looks like you equally embody all aspects of winter! Please use Introspection to see if we can find your true match.")
+        st.write("It looks like you equally embody all aspects of winter! Please try answering again to see if we can find your true match.")
 
 
 elif selected == "Analysis":
@@ -247,7 +247,12 @@ elif selected == "Analysis":
     st.write("Do you have further thoughts on winter? Please share!")
     user_input = st.text_area("Share your reflections:")
 
-    if st.button("Save"):
+    # Agreement text
+    st.markdown(
+        "By clicking 'Share,' you agree to the terms outlined in the disclaimers, including the use of your input for research and improvement purposes."
+    )
+
+    if st.button("Share"):
         if user_input.strip():  # Ensure the input isn't empty
             try:
                 # Connect to Airtable
@@ -262,7 +267,16 @@ elif selected == "Analysis":
         else:
             st.warning("Please enter your thoughts before saving.")
 
-# Footer
+# Footer with disclaimers
+st.info(
+    "Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. "
+    "They may not reflect real-life experiences or outcomes. Please use them as a creative tool rather than factual advice.\n\n"
+    "Disclaimer: Your input may be stored and used for research and improvement of this application. "
+    "No personally identifiable information is collected or shared.\n\n"
+    "Note: This app uses third-party services like Airtable for data storage. "
+    "By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies."
+)
+
 footer = '''
 <hr>
 <div style="text-align: center; margin-top: -20px;">

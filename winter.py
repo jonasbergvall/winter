@@ -266,7 +266,7 @@ elif selected == "Analysis":
         else:
             st.warning("Please enter your thoughts before saving.")
 
-# Footer with Tooltip
+# Footer with Tooltip and Disclaimer Text
 st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown(
     """
@@ -276,6 +276,8 @@ st.markdown(
         display: inline-block;
         cursor: pointer;
         font-size: 14px;
+        color: #007BFF; /* Blue text for interactivity */
+        text-decoration: underline;
     }
     .tooltip .tooltiptext {
         visibility: hidden;
@@ -301,7 +303,7 @@ st.markdown(
 
     <div style="text-align: center; margin-top: -10px;">
         <p>Explore more data-driven perspectives at <a href="https://bestofworlds.se" target="_blank">Best of Worlds</a>.</p>
-        <p class="tooltip">❔
+        <p class="tooltip">Disclaimer
             <span class="tooltiptext">
                 Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. 
                 They may not reflect real-life experiences or outcomes. Please use them as a creative tool rather than factual advice.<br><br>

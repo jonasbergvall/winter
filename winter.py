@@ -266,7 +266,7 @@ elif selected == "Analysis":
         else:
             st.warning("Please enter your thoughts before saving.")
 
-# Footer with Tooltip and Disclaimer Text
+# Footer with Disclaimer Text and Link without Underline
 st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown(
     """
@@ -277,7 +277,6 @@ st.markdown(
         cursor: pointer;
         font-size: 14px;
         color: #007BFF; /* Blue text for interactivity */
-        text-decoration: underline;
     }
     .tooltip .tooltiptext {
         visibility: hidden;
@@ -299,10 +298,16 @@ st.markdown(
         visibility: visible;
         opacity: 1;
     }
+    a {
+        text-decoration: none; /* Remove underline from links */
+        color: #007BFF; /* Match link color */
+    }
+    a:hover {
+        text-decoration: underline; /* Optional: underline on hover */
+    }
     </style>
 
     <div style="text-align: center; margin-top: -10px;">
-        <p>Explore more data-driven perspectives at <a href="https://bestofworlds.se" target="_blank">Best of Worlds</a>.</p>
         <p class="tooltip">Disclaimer
             <span class="tooltiptext">
                 Disclaimer: The narratives and perspectives provided are generated for exploratory and entertainment purposes. 
@@ -313,6 +318,7 @@ st.markdown(
                 By submitting your thoughts, you agree to the processing of data in accordance with their privacy policies.
             </span>
         </p>
+        <p>Explore more data-driven perspectives at <a href="https://bestofworlds.se" target="_blank">Best of Worlds</a>.</p>
     </div>
     """,
     unsafe_allow_html=True,

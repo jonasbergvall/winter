@@ -128,73 +128,79 @@ elif selected == "Introspection":
 
 elif selected == "Your Story":
     st.title("Your Winter Story")
-    # Determine the User's Archetype or Blended Archetype
-    max_score = max(st.session_state["scores"].values())
-    high_scorers = [archetype for archetype, score in st.session_state["scores"].items() if score == max_score]
-
-    if len(high_scorers) == 1:
-        # Pure Story
-        selected_archetype = high_scorers[0]
-        story = stories_data["stories"]["pure"][selected_archetype]
-        st.subheader(story["title"])
-        st.write(story["story"])
-
-        # Add Enriching Your Winter Experience content
-        enriching_content = diverse_data["diverse_elements"][selected_archetype]
-        st.markdown("### Enriching Your Winter Experience")
-        enriching_text = "\n\n".join([perspective["perspective"] for perspective in enriching_content["additional_perspectives"]])
-        st.write(enriching_text)
-
-        # Add download button for generated story
-        def generate_docx_from_text(story_title, story_text, enriching_text):
-            """
-            Generates a DOCX file with the given story title, story content, and enriching content.
-            """
-            doc = Document()
-
-            # Add the logo to the document
-            logo_url = "https://bestofworlds.se/img/lglogo.png"
-            try:
-                response = requests.get(logo_url)
-                response.raise_for_status()
-                logo_image = io.BytesIO(response.content)
-                doc.add_picture(logo_image, width=Inches(2))
-                doc.add_paragraph()  # Add a blank line after the logo
-            except requests.exceptions.RequestException as e:
-                st.error(f"Failed to download logo image: {e}")
-
-            # Add story title and story text to document
-            doc.add_heading(story_title, level=1)
-            doc.add_paragraph(story_text)
-
-            # Add enriching content to the document
-            doc.add_heading("Enriching Your Winter Experience", level=2)
-            doc.add_paragraph(enriching_text)
-
-            # Save the document to a BytesIO buffer
-            docx_output = io.BytesIO()
-            doc.save(docx_output)
-            docx_output.seek(0)
-            return docx_output
-
-        # Generate and download the DOCX file
-        docx_file = generate_docx_from_text(story["title"], story["story"], enriching_text)
-        st.download_button(
-            label="Download Your Winter Narrative as DOCX",
-            data=docx_file,
-            file_name="winter_narrative.docx",
-            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        )
-
-    elif len(high_scorers) == 2:
-        # Blended Story
-        archetype_combo = f"{high_scorers[0]}_{high_scorers[1]}"
-        story = stories_data["stories"]["blended"][archetype_combo]
-        st.subheader(story["title"])
-        st.write(story["story"])
+    
+    # Kontrollera om användaren har fyllt i "Introspection"
+    if all(score == 0 for score in st.session_state["scores"].values()):
+        st.write("Du har inte fyllt i Introspection än! Gå till 'Introspection' för att utforska dina perspektiv om vintern.")
     else:
-        # In case all archetypes are tied (unlikely, but handled here)
-        st.write("It looks like you equally embody all aspects of winter! Please try answering again to see if we can find your true match.")
+        # Determine the User's Archetype or Blended Archetype
+        max_score = max(st.session_state["scores"].values())
+        high_scorers = [archetype for archetype, score in st.session_state["scores"].items() if score == max_score]
+
+        if len(high_scorers) == 1:
+            # Pure Story
+            selected_archetype = high_scorers[0]
+            story = stories_data["stories"]["pure"][selected_archetype]
+            st.subheader(story["title"])
+            st.write(story["story"])
+
+            # Add Enriching Your Winter Experience content
+            enriching_content = diverse_data["diverse_elements"][selected_archetype]
+            st.markdown("### Enriching Your Winter Experience")
+            enriching_text = "\n\n".join([perspective["perspective"] for perspective in enriching_content["additional_perspectives"]])
+            st.write(enriching_text)
+
+            # Add download button for generated story
+            def generate_docx_from_text(story_title, story_text, enriching_text):
+                """
+                Generates a DOCX file with the given story title, story content, and enriching content.
+                """
+                doc = Document()
+
+                # Add the logo to the document
+                logo_url = "https://bestofworlds.se/img/lglogo.png"
+                try:
+                    response = requests.get(logo_url)
+                    response.raise_for_status()
+                    logo_image = io.BytesIO(response.content)
+                    doc.add_picture(logo_image, width=Inches(2))
+                    doc.add_paragraph()  # Add a blank line after the logo
+                except requests.exceptions.RequestException as e:
+                    st.error(f"Failed to download logo image: {e}")
+
+                # Add story title and story text to document
+                doc.add_heading(story_title, level=1)
+                doc.add_paragraph(story_text)
+
+                # Add enriching content to the document
+                doc.add_heading("Enriching Your Winter Experience", level=2)
+                doc.add_paragraph(enriching_text)
+
+                # Save the document to a BytesIO buffer
+                docx_output = io.BytesIO()
+                doc.save(docx_output)
+                docx_output.seek(0)
+                return docx_output
+
+            # Generate and download the DOCX file
+            docx_file = generate_docx_from_text(story["title"], story["story"], enriching_text)
+            st.download_button(
+                label="Download Your Winter Narrative as DOCX",
+                data=docx_file,
+                file_name="winter_narrative.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            )
+
+        elif len(high_scorers) == 2:
+            # Blended Story
+            archetype_combo = f"{high_scorers[0]}_{high_scorers[1]}"
+            story = stories_data["stories"]["blended"][archetype_combo]
+            st.subheader(story["title"])
+            st.write(story["story"])
+        else:
+            # In case all archetypes are tied (unlikely, but handled here)
+            st.write("It looks like you equally embody all aspects of winter! Please try answering again to see if we can find your true match.")
+
 
 
 elif selected == "Analysis":

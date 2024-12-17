@@ -104,7 +104,7 @@ def round_corners(image, radius):
 # Navigation Logic
 if selected == "Start":
     st.title("Winter Narratives")
-    st.image("https://www.bestofworlds.se/img/winter.webp", use_column_width=True)
+    st.image("https://www.bestofworlds.se/img/winter.webp", use_container_width=True)
     st.write("Welcome to the Winter Narrative app! Explore your feelings about winter and see which story fits you best.")
     st.write("This is a fun way to explore diversity and different perspectives, especially regarding something as universally experienced yet uniquely perceived as winter. Continue by clicking Introspection in the menu.")
 
@@ -214,14 +214,14 @@ elif selected == "Analysis":
             if os.path.exists(image_path):
                 image1 = Image.open(image_path)
                 image1_rounded = round_corners(image1, radius=30)
-                st.image(image1_rounded, caption=mode1, use_column_width=True)
+                st.image(image1_rounded, caption=mode1, use_container_width=True)
             st.markdown(f"<p class='explanation-text'>{modes_data[mode1]['Explanation']}</p>", unsafe_allow_html=True)
         elif mode1 == "Select":
             neutral_image_path = os.path.join("images", "neutral.jpg")
             if os.path.exists(neutral_image_path):
                 neutral_image = Image.open(neutral_image_path)
                 neutral_image_rounded = round_corners(neutral_image, radius=30)
-                st.image(neutral_image_rounded, caption="Please select a mode", use_column_width=True)
+                st.image(neutral_image_rounded, caption="Please select a mode", use_container_width=True)
 
     with col3:
         mode2 = st.selectbox("Select another mode", modes_list, key="mode2")
@@ -230,14 +230,14 @@ elif selected == "Analysis":
             if os.path.exists(image_path):
                 image2 = Image.open(image_path)
                 image2_rounded = round_corners(image2, radius=30)
-                st.image(image2_rounded, caption=mode2, use_column_width=True)
+                st.image(image2_rounded, caption=mode2, use_container_width=True)
             st.markdown(f"<p class='explanation-text'>{modes_data[mode2]['Explanation']}</p>", unsafe_allow_html=True)
         elif mode2 == "Select":
             neutral_image_path = os.path.join("images", "neutral.jpg")
             if os.path.exists(neutral_image_path):
                 neutral_image = Image.open(neutral_image_path)
                 neutral_image_rounded = round_corners(neutral_image, radius=30)
-                st.image(neutral_image_rounded, caption="Please select a mode", use_column_width=True)
+                st.image(neutral_image_rounded, caption="Please select a mode", use_container_width=True)
 
     with col2:
         st.write("Select a theme from each dropdown menu. What happens when these two perspectives come together? Do they clash, or do they complement each other? Discover how different ways of seeing winter can highlight the tensions and harmonies in our shared experience.")

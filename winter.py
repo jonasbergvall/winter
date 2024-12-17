@@ -131,7 +131,7 @@ elif selected == "Your Story":
     
     # Kontrollera om användaren har fyllt i "Introspection"
     if all(score == 0 for score in st.session_state["scores"].values()):
-        st.write("Du har inte fyllt i Introspection än! Gå till 'Introspection' för att utforska dina perspektiv om vintern.")
+        st.write("Please explore you winter experience under Introspection")
     else:
         # Determine the User's Archetype or Blended Archetype
         max_score = max(st.session_state["scores"].values())
